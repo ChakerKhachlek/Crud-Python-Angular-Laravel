@@ -1,0 +1,31 @@
+<div *ngIf="user">
+    <h2><span class="badge badge-secondary" style="margin-right:10px">{{user.name | uppercase}}</span> <span class="badge badge-info">Details</span></h2>
+    <div style="margin-top : 10px;padding:10px" >
+      <p class="text-success">
+          Name: {{user.name}}
+      </p>
+      <p class="text-success">
+          Email: {{user.email}}
+      </p>
+
+      <div *ngIf="user.age">
+      <p class="text-primary">
+        Age: {{user.age}}
+       </p>
+      </div>
+
+      <div *ngIf="user.sexe">
+    <p class="text-primary">
+      Sexe: {{user.sexe}}
+       </p>
+      </div>
+
+      <div *ngIf="user.country">
+     <p class="text-primary">
+       Country: {{user.country}}
+        </p>
+      </div>
+
+    </div>
+    <button class="btn btn-secondary" (click)="goBack()">go back</button>
+  </div>
